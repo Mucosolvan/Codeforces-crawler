@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+</form>
+
+<table>
+    <th>
+        {% for header in headers %}
+        <td> {{ header }}</td>
+        {% endfor %}
+    </th>
+    {% for task in tasks %}
+        <tr>
+            <td></td>
+            <td style="text-align: center;"> <a href = {{ task.url }}> Link </a></td>
+            <td> {{ task.name }}</td>
+            <td> {{ task.difficulty }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
