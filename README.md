@@ -9,4 +9,5 @@ Należy wejść w folder Crawler/Crawler, i tam w folderze spiders znajduje się
 Extractor znajduje się w pliku extractor.py, zaś parser w parser.py, wszystkie odpala się przez python nazwa.
 
 Serwer:
+
 Żeby postawić serwer należy wejść do folderu CodeforcesCrawler i tam odpalić komendę python manage.py runserver (wymaga Django, redis-py oraz rabbita).
