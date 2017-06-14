@@ -5,7 +5,7 @@ class TagForm(forms.Form):
         super(TagForm, self).__init__(*args, **kwargs)
         for i in connection.smembers("tags"):
             print (i.decode('utf-8'))
-        self.fields['tags'] = forms.ChoiceField(
+        self.fields['tag'] = forms.ChoiceField(
             choices=[(i, i) for i in connection.smembers("tags")]
         )
 

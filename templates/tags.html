@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'crawler/style.css' %}" />
+
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Wyszukiwanie</title>
 </head>
-<body>
-<form action="" method="post">
+<body style="background-color: lightgrey">
+<form action="" method="post" style="display: inline-block;
+    text-align: center;">
     {% csrf_token %}
     {{ form }}
-    <input type="submit" value="Submit" />
+    <input type="submit" value="Szukaj" />
 </form>
 
 <table>

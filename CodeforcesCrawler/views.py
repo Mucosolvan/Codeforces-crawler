@@ -6,10 +6,12 @@ from .forms import TagForm, DifficultyForm
 
 # Create your views here.
 
+
 def change(s1):
     if s1[0] == '1':
         return '3' + s1[1]
     return s1
+
 
 def tags_view(request):
     try:
@@ -25,7 +27,7 @@ def tags_view(request):
     if request.method == 'POST':
         form = TagForm(conn, request.POST)
         if form.is_valid():
-            tag = form.cleaned_data['tags']
+            tag = form.cleaned_data['tag']
             tasks = []
             for url in conn.smembers(tag):
                 dct = conn.hgetall(url)
