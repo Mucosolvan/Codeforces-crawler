@@ -1,7 +1,7 @@
 # Codeforces-crawler
 Codeforces crawler
 
-Żeby projekt działał sensownie należy postawić dwa serwery redisa - jeden na porcie 6379, jeden na 6380 oraz serwer RabbitMQ na porcie 5672.
+Żeby projekt działał sensownie należy postawić dwa serwery redisa - jeden na porcie 6379, jeden na 6380 z konfiguracją z pliku redis-slave.conf oraz serwer RabbitMQ na porcie 5672.
 
 Scrapowanie:
 
